@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "814878673956",
+    "project_id": "shcfinance-e9877",
+    "storage_bucket": "shcfinance-e9877.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:814878673956:android:fab166eb964c5bb8335cb1",
+        "android_client_info": {
+          "package_name": "com.example.shcfinance"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "814878673956-s3bt88p51t8udlthpg8j61g9hn1q5d9t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDk2APXENDPjzUG5EAJVxusuC2baste-Ys"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "814878673956-s3bt88p51t8udlthpg8j61g9hn1q5d9t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

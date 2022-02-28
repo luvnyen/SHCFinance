@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tvItemCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Kategori: ___"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvItemSumofMoney" />
+
+    <TextView
+        android:id="@+id/tvItemDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Catatan/keterangan"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/tvItemCategory"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvItemSumofMoney"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rp0"
+        android:textColor="#000000"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/tvItemDescription"
+        app:layout_constraintTop_toBottomOf="@+id/tvItemDescription" />
+
+    <TextView
+        android:id="@+id/tvItemDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tanggal dan waktu"
+        app:layout_constraintStart_toStartOf="@+id/tvItemCategory"
+        app:layout_constraintTop_toBottomOf="@+id/tvItemCategory" />
+
+    <ImageButton
+        android:id="@+id/iconItemDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="#eb283b"
+        app:layout_constraintBottom_toBottomOf="@+id/tvItemDate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvItemDescription"
+        app:srcCompat="@drawable/ic_baseline_delete_forever_24" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

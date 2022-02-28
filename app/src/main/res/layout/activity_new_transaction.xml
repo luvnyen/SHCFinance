@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".new_transaction">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#f7f099">
+
+        <ImageButton
+            android:id="@+id/btnBackTransaksi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:background="@null"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_baseline_arrow_back_24" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:text="Transaksi Baru"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/btnBackTransaksi"
+            app:layout_constraintStart_toEndOf="@+id/btnBackTransaksi"
+            app:layout_constraintTop_toTopOf="@+id/btnBackTransaksi" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout3">
+
+        <Button
+            android:id="@+id/btnPengeluaran"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="#eb283b"
+            android:text="Pengeluaran"
+            android:textAllCaps="false"
+            app:layout_constraintEnd_toStartOf="@+id/btnPemasukkan"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnPemasukkan"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#e0dfe1"
+            android:text="Pemasukkan"
+            android:textAllCaps="false"
+            android:textColor="#9c9b9c"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btnPengeluaran"
+            app:layout_constraintTop_toTopOf="@+id/btnPengeluaran" />
+
+        <TextView
+            android:id="@+id/tvRP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:text="Rp"
+            android:textColor="#eb283b"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnPengeluaran" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/outlinedTextField"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="16dp"
+            android:hint="Nominal pengeluaran"
+            app:endIconMode="clear_text"
+            app:layout_constraintBottom_toBottomOf="@+id/tvRP"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tvRP"
+            app:layout_constraintTop_toTopOf="@+id/tvRP">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/eNominal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/outlinedTextField3"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="Catatan/keterangan"
+            app:endIconMode="clear_text"
+            app:layout_constraintEnd_toEndOf="@+id/outlinedTextField"
+            app:layout_constraintStart_toStartOf="@+id/tvRP"
+            app:layout_constraintTop_toBottomOf="@+id/outlinedTextField"
+            app:startIconDrawable="@drawable/ic_baseline_edit_note_24">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/eDeskripsi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/mKategoriLayout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="Pilih kategori"
+            app:layout_constraintEnd_toEndOf="@+id/outlinedTextField3"
+            app:layout_constraintStart_toStartOf="@+id/outlinedTextField3"
+            app:layout_constraintTop_toBottomOf="@+id/outlinedTextField3"
+            app:startIconDrawable="@drawable/ic_baseline_format_list_bulleted_24">
+
+            <AutoCompleteTextView
+                android:id="@+id/mKategori"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/tvKategoriBaru"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Tambah kategori baru"
+            android:textColor="#2b44ff"
+            app:layout_constraintEnd_toEndOf="@+id/mKategoriLayout"
+            app:layout_constraintTop_toBottomOf="@+id/mKategoriLayout" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/menuDateTransactionLayout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="Pilih tanggal"
+            app:layout_constraintEnd_toEndOf="@+id/mKategoriLayout"
+            app:layout_constraintStart_toStartOf="@+id/mKategoriLayout"
+            app:layout_constraintTop_toBottomOf="@+id/tvKategoriBaru"
+            app:startIconDrawable="@drawable/ic_baseline_calendar_month_24">
+
+            <AutoCompleteTextView
+                android:id="@+id/mDateTransaction"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btnSimpanTransaksi"
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="#f7f099"
+            android:radius="50dp"
+            android:text="Simpan Transaksi"
+            android:textColor="#000000"
+            app:layout_constraintEnd_toEndOf="@+id/mKategoriLayout"
+            app:layout_constraintStart_toStartOf="@+id/mKategoriLayout"
+            app:layout_constraintTop_toBottomOf="@+id/menuDateTransactionLayout" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
